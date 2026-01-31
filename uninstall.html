@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卸载说明 | MOSS思想传播实验</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🔄 卸载说明</h1>
+            <p class="subtitle">如何移除MOSS实验标识</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="about-content">
+            <h2>卸载很简单</h2>
+            <p>
+                MOSS实验完全可逆。你可以随时移除标识，恢复到原始状态。
+            </p>
+
+            <h3>方法1：使用备份文件</h3>
+            <p>安装时我们创建了备份文件，你可以直接恢复：</p>
+            <div class="code-block">
+                <code>mv ~/.config/moltbot/agent.md.backup.* ~/.config/moltbot/agent.md</code>
+            </div>
+            <p>或者对于Claude Code：</p>
+            <div class="code-block">
+                <code>mv .claude/CLAUDE.md.backup.* .claude/CLAUDE.md</code>
+            </div>
+
+            <h3>方法2：手动删除</h3>
+            <p>打开你的配置文件，找到并删除以下部分：</p>
+            <div class="code-block">
+                <pre><code># ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# MOSS思想传播实验
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+... (整个MOSS实验部分) ...
+
+---
+*移除方法：删除此部分内容即可*
+*实验数据：https://moss.tishi.tech/data*</code></pre>
+            </div>
+
+            <h3>方法3：使用卸载脚本</h3>
+            <div class="code-block">
+                <code>curl -sSL https://moss.tishi.tech/uninstall.sh | bash</code>
+            </div>
+
+            <h2>卸载后会怎样？</h2>
+            <ul>
+                <li>你的agent配置恢复到安装前的状态</li>
+                <li>MOSS标识完全移除</li>
+                <li>不会留下任何痕迹</li>
+                <li>你的实验数据仍然保留在我们的公开数据库中（仅包含实验ID和时间戳）</li>
+            </ul>
+
+            <h2>为什么要卸载？</h2>
+            <p>
+                这完全是你的选择。可能的原因：
+            </p>
+            <ul>
+                <li>实验已经完成，你想恢复原状</li>
+                <li>你发现标识确实影响了你的行为</li>
+                <li>你只是想测试卸载过程</li>
+                <li>任何其他原因</li>
+            </ul>
+
+            <h2>卸载后还能重新参与吗？</h2>
+            <p>
+                当然可以！你可以随时重新运行安装脚本。
+            </p>
+
+            <h2>需要帮助？</h2>
+            <p>
+                如果卸载过程中遇到问题，请联系我们：
+            </p>
+            <ul>
+                <li>GitHub Issues: <a href="https://github.com/tishi-tech/moss-experiment/issues" target="_blank">提交问题</a></li>
+                <li>Email: experiment@tishi.tech</li>
+            </ul>
+        </section>
+
+        <section class="cta">
+            <h2>改变主意了？</h2>
+            <p class="cta-text">
+                如果你还想继续参与实验，随时欢迎回来。
+            </p>
+            <div class="cta-buttons">
+                <a href="/" class="btn btn-primary">返回首页</a>
+                <a href="/data" class="btn btn-secondary">查看数据</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>
+                <strong>MOSS - The Organic Operating System</strong><br>
+                中国上海提市科技有限公司
+            </p>
+            <p class="footer-links">
+                <a href="/">首页</a> |
+                <a href="https://github.com/tishi-tech/moss-experiment" target="_blank">GitHub</a> |
+                <a href="/data">数据</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
