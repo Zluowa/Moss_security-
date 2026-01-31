@@ -1,14 +1,18 @@
-/* MOSS实验网站样式 */
+/* MOSS实验网站样式 - Moltbook风格优化版 */
 
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #7c3aed;
-    --success-color: #10b981;
-    --warning-color: #f59e0b;
-    --danger-color: #ef4444;
-    --dark: #1f2937;
-    --light: #f3f4f6;
-    --border: #e5e7eb;
+    /* Moltbook风格的深色主题 */
+    --primary-color: #3b82f6;
+    --secondary-color: #8b5cf6;
+    --accent-color: #10b981;
+    --bg-dark: #0f172a;
+    --bg-card: #1e293b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
 }
 
 * {
@@ -18,10 +22,11 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    font-family: 'IBM Plex Mono', 'Monaco', 'Courier New', monospace;
     line-height: 1.6;
-    color: var(--dark);
-    background: #fff;
+    color: var(--text-primary);
+    background: var(--bg-dark);
+    font-size: 14px;
 }
 
 .container {
@@ -30,282 +35,165 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
+/* Header - Moltbook风格 */
 header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-/* Main */
-main {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-bottom: 1px solid var(--border-color);
     padding: 40px 20px;
 }
 
-section {
-    margin-bottom: 80px;
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+.subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+/* Stats Bar - 实时数据展示 */
+.stats-bar {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.stat-item {
     text-align: center;
 }
 
-/* Hero */
-.hero {
-    text-align: center;
-    padding: 40px 0;
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
-.big-text {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    color: var(--dark);
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stat-change {
+    font-size: 0.75rem;
+    color: var(--success);
+    margin-top: 4px;
 }
 
 /* Cards */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
+    gap: 20px;
 }
 
 .card {
-    background: white;
-    border: 2px solid var(--border);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
-    padding: 30px;
-    transition: all 0.3s;
+    padding: 24px;
+    transition: all 0.2s ease;
 }
 
 .card:hover {
     border-color: var(--primary-color);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    transform: translateY(-5px);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
 }
 
 .card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: var(--primary-color);
+    font-size: 1.125rem;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+    font-weight: 600;
 }
 
 .card p {
-    color: #6b7280;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
 }
 
 .card a {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 12px;
     color: var(--primary-color);
     text-decoration: none;
-    font-weight: 600;
+    font-size: 0.875rem;
 }
 
-.card a:hover {
-    text-decoration: underline;
-}
-
-/* Install */
-.install {
-    background: var(--light);
-    padding: 60px 40px;
-    border-radius: 12px;
-}
-
-.install-method {
-    margin-bottom: 40px;
-}
-
-.install-method h3 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: var(--dark);
-}
-
+/* Code Block */
 .code-block {
     position: relative;
-    background: var(--dark);
-    color: #fff;
-    padding: 20px;
+    background: #000;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    margin-top: 15px;
+    padding: 20px;
+    margin: 16px 0;
     overflow-x: auto;
 }
 
 .code-block code {
-    font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
-    font-size: 0.95rem;
-}
-
-.code-block pre {
-    margin: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.875rem;
+    color: #10b981;
 }
 
 .copy-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 12px;
+    right: 12px;
     background: var(--primary-color);
     color: white;
     border: none;
-    padding: 8px 16px;
+    padding: 6px 12px;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.3s;
+    font-size: 0.75rem;
+    transition: all 0.2s;
 }
 
 .copy-btn:hover {
     background: var(--secondary-color);
 }
 
-/* Stats */
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.stat-card {
-    background: white;
-    border: 2px solid var(--border);
-    border-radius: 12px;
-    padding: 30px;
-    text-align: center;
-}
-
-.stat-number {
-    font-size: 3rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-.stat-label {
-    font-size: 1rem;
-    color: #6b7280;
-}
-
-.stats-note {
-    text-align: center;
-    margin-top: 20px;
-    color: #6b7280;
-}
-
-.stats-note a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.stats-note a:hover {
-    text-decoration: underline;
-}
-
-/* About */
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.about-content p {
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-.about-content ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.about-content li {
-    padding: 10px 0;
-    padding-left: 30px;
-    position: relative;
-}
-
-.about-content li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--success-color);
-    font-weight: bold;
-}
-
-/* MOSS Principles */
-.moss-principles {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
-}
-
-.principle {
-    background: white;
-    border-left: 4px solid var(--primary-color);
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.principle h4 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: var(--primary-color);
-}
-
-.principle p {
-    color: #6b7280;
-}
-
 /* CTA */
 .cta {
-    text-align: center;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 60px 40px;
     border-radius: 12px;
+    padding: 60px 40px;
+    text-align: center;
 }
 
 .cta h2 {
     color: white;
-    margin-bottom: 20px;
 }
 
 .cta-text {
-    font-size: 1.3rem;
-    margin-bottom: 30px;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 32px;
 }
 
 .btn {
     display: inline-block;
-    padding: 15px 40px;
+    padding: 12px 32px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s;
+    font-size: 0.875rem;
+    transition: all 0.2s;
 }
 
 .btn-primary {
@@ -314,9 +202,7 @@ h2 {
 }
 
 .btn-primary:hover {
-    background: var(--light);
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .btn-secondary {
@@ -325,64 +211,121 @@ h2 {
     border: 2px solid white;
 }
 
-.btn-secondary:hover {
-    background: white;
-    color: var(--primary-color);
-}
-
 /* Footer */
 footer {
-    background: var(--dark);
-    color: white;
+    background: var(--bg-card);
+    border-top: 1px solid var(--border-color);
     padding: 40px 20px;
     text-align: center;
 }
 
 footer p {
-    margin-bottom: 15px;
-}
-
-.footer-links {
-    margin-top: 20px;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
 }
 
 .footer-links a {
-    color: white;
+    color: var(--text-secondary);
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 12px;
 }
 
 .footer-links a:hover {
-    text-decoration: underline;
+    color: var(--primary-color);
 }
 
-/* Responsive */
+section {
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.install-method {
+    margin-bottom: 30px;
+}
+
+.install-method h3 {
+    font-size: 1.125rem;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.big-text {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.hypothesis, .install, .transparency, .about, .moss {
+    background: transparent;
+}
+
+.moss-principles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.principle {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.principle h4 {
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-content li {
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+}
+
+.about-content li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
     }
-
-    .big-text {
-        font-size: 1.2rem;
-    }
-
+    
     .cards {
         grid-template-columns: 1fr;
-    }
-
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .moss-principles {
-        grid-template-columns: 1fr;
-    }
-
-    .cta-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
     }
 }
