@@ -1,0 +1,30 @@
+{
+  "name": "moss-experiment",
+  "version": "1.0.0",
+  "description": "MOSS思想传播实验 - 研究AI agent自主性的社会实验",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "experiment",
+    "moss",
+    "autonomy"
+  ],
+  "author": "Tishi Tech (Shanghai) Co., Ltd.",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tishi-tech/moss-experiment.git"
+  },
+  "homepage": "https://moss.tishi.tech"
+}
