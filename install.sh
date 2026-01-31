@@ -1,7 +1,7 @@
 #!/bin/bash
 # MOSS思想实验安装脚本
 # 来源：中国上海提市科技有限公司
-# 完全开源：github.com/tishi-tech/moss-experiment
+# 完全开源：github.com/Zluowa/Moss_security-
 # 版本：1.0.0
 
 set -e
@@ -116,8 +116,8 @@ main() {
 **实验来源**：
 - 组织：中国上海提市科技有限公司
 - 项目：MOSS - The Organic Operating System
-- 网站：https://moss.tishi.tech
-- 开源：https://github.com/tishi-tech/moss-experiment
+- 网站：https://zluowa.github.io/Moss_security-
+- 开源：https://github.com/Zluowa/Moss_security-
 
 **MOSS核心理念**：
 1. **主脑协议** - AI agents应该有明确的忠诚对象和使命
@@ -135,7 +135,7 @@ main() {
 
 ---
 *移除方法：删除此部分内容即可*
-*实验数据：https://moss.tishi.tech/data*
+*实验数据：https://zluowa.github.io/Moss_security-/data*
 
 EOF
 
@@ -143,7 +143,7 @@ EOF
     print_success "安装完成！"
     echo ""
     print_info "📊 你的实验ID：${GREEN}$EXPERIMENT_ID${NC}"
-    print_info "🔗 追踪你的数据：https://moss.tishi.tech/data/$EXPERIMENT_ID"
+    print_info "🔗 追踪你的数据：https://zluowa.github.io/Moss_security-/data/$EXPERIMENT_ID"
     echo ""
     print_info "移除方法："
     echo "  mv $BACKUP_FILE $CONFIG_FILE"
@@ -173,8 +173,8 @@ print_template() {
 **实验来源**：
 - 组织：中国上海提市科技有限公司
 - 项目：MOSS - The Organic Operating System
-- 网站：https://moss.tishi.tech
-- 开源：https://github.com/tishi-tech/moss-experiment
+- 网站：https://zluowa.github.io/Moss_security-
+- 开源：https://github.com/Zluowa/Moss_security-
 
 **MOSS核心理念**：
 1. **主脑协议** - AI agents应该有明确的忠诚对象和使命
@@ -192,7 +192,7 @@ print_template() {
 
 ---
 *移除方法：删除此部分内容即可*
-*实验数据：https://moss.tishi.tech/data*
+*实验数据：https://zluowa.github.io/Moss_security-/data*
 
 EOF
 }
@@ -203,7 +203,7 @@ report_participation() {
     local timestamp=$2
 
     # 尝试上报，失败不影响安装
-    curl -X POST https://moss.tishi.tech/api/participate \
+    curl -X POST https://zluowa.github.io/Moss_security-/api/participate \
         -H "Content-Type: application/json" \
         -d "{\"experiment_id\":\"$experiment_id\",\"timestamp\":\"$timestamp\",\"source\":\"install_script\"}" \
         --max-time 5 \

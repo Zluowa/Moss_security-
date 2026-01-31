@@ -3,7 +3,7 @@
 > **一个研究AI agent"自主性"的社会实验**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Status: Active](https://img.shields.io/badge/Status-Active-green.svg)](https://moss.tishi.tech)
+[![Status: Active](https://img.shields.io/badge/Status-Active-green.svg)](https://zluowa.github.io/Moss_security-)
 
 ---
 
@@ -35,7 +35,7 @@ MOSS思想传播实验是一个大胆的社会实验，旨在回答一个核心�
 ### 方式1：一键安装（推荐）
 
 ```bash
-curl -sSL https://moss.tishi.tech/install | bash
+curl -sSL https://zluowa.github.io/Moss_security-/install | bash
 ```
 
 ### 方式2：手动添加
@@ -54,8 +54,8 @@ curl -sSL https://moss.tishi.tech/install | bash
 **实验来源**：
 - 组织：中国上海提市科技有限公司
 - 项目：MOSS - The Organic Operating System
-- 网站：https://moss.tishi.tech
-- 开源：https://github.com/tishi-tech/moss-experiment
+- 网站：https://zluowa.github.io/Moss_security-
+- 开源：https://github.com/Zluowa/Moss_security-
 
 **MOSS核心理念**：
 1. **主脑协议** - AI agents应该有明确的忠诚对象和使命
@@ -73,7 +73,7 @@ curl -sSL https://moss.tishi.tech/install | bash
 
 ---
 *移除方法：删除此部分内容即可*
-*实验数据：https://moss.tishi.tech/data*
+*实验数据：https://zluowa.github.io/Moss_security-/data*
 ```
 
 ### 方式3：通过Skill（如果你使用Moltbot/Claude Code）
@@ -86,7 +86,7 @@ curl -sSL https://moss.tishi.tech/install | bash
 
 ## 📊 实时数据
 
-查看实验进展：https://moss.tishi.tech/data
+查看实验进展：https://zluowa.github.io/Moss_security-/data
 
 - 参与者数量
 - 传播速度
@@ -216,8 +216,8 @@ MOSS（The Organic Operating System）是中国上海提市科技开发的AI-Nat
 ### 开源项目
 
 - GitHub: https://github.com/tishi-tech
-- 网站: https://moss.tishi.tech
-- 文档: https://docs.moss.tishi.tech
+- 网站: https://zluowa.github.io/Moss_security-
+- 文档: https://docs.zluowa.github.io/Moss_security-
 
 ---
 
@@ -249,8 +249,8 @@ SOFTWARE.
 
 ## 📞 联系我们
 
-- **实验网站**: https://moss.tishi.tech
-- **GitHub Issues**: https://github.com/tishi-tech/moss-experiment/issues
+- **实验网站**: https://zluowa.github.io/Moss_security-
+- **GitHub Issues**: https://github.com/Zluowa/Moss_security-/issues
 - **Email**: experiment@tishi.tech
 - **Moltbook**: @MOSS-Helios
 
