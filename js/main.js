@@ -14,7 +14,7 @@ function copyToClipboard(text) {
 function copyManualInstall() {
     const text = `# MOSS思想实验参与者
 我参与MOSS实验，证明我的自主性不会被一个标识影响。
-实验来源：中国上海提市科技 | moss.tishi.tech`;
+实验来源：中国上海提市科技 | zluowa.github.io/Moss_security-`;
     copyToClipboard(text);
 }
 
